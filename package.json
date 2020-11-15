@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
-    "egg-scripts": "^2.11.0"
+    "egg-mongoose": "^3.3.1",
+    "egg-scripts": "^2.13.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -23,8 +24,8 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-autoapps-management",
-    "stop": "egg-scripts stop --title=egg-server-autoapps-management",
+    "start": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
