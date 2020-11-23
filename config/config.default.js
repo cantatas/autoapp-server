@@ -13,9 +13,9 @@ module.exports = appInfo => {
   const config = exports = {
     security: {
       csrf: {
-        enable: false
-      }
-    }
+        enable: false,
+      },
+    },
   };
 
   // use for cookie sign key, should change to your own and keep security
@@ -26,11 +26,11 @@ module.exports = appInfo => {
 
   config.mongoose = {
     client: {
-      // url: "mongodb://root:${autoapps}$@localhost:27017/autoapps", //有用户名密码的情况
-
-      url: "mongodb://127.0.0.1/autoapps", //无用户名密码的情况
-      options: {}
-    }
+      // url: 'mongodb://root:${autoapps}$@localhost:27017/autoapps', // 有用户名密码的情况
+      url: 'mongodb://127.0.0.1/autoapps', // 无用户名密码的情况
+      // url: 'mongodb://81.71.9.173:27017/autoapps', // 无用户名密码的情况
+      options: {},
+    },
   };
 
   // add your user config here

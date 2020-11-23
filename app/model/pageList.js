@@ -5,21 +5,20 @@ module.exports = app => {
   const Schema = mongoose.Schema;
 
   // 数据库表映射
-  const EditorSchema = new Schema({
-    id: {
+  const PageListSchema = new Schema({
+    title: {
       type: String,
     },
-    name: {
-      type: String,
-    },
-    formAttribute: {
-      type: String,
+    status: {// 0：未发布、1：已发布
+      type: Number,
     },
     createTime: {
       type: Date,
+      default: new Date().getTime(),
     },
     updateTime: {
       type: Date,
+      default: new Date().getTime(),
     },
     createBy: {
       type: String,
@@ -29,5 +28,5 @@ module.exports = app => {
     },
   });
 
-  return mongoose.model('Editor', EditorSchema, 'editor');
+  return mongoose.model('PageList', PageListSchema, 'pageList');
 };

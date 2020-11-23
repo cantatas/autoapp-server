@@ -7,4 +7,5 @@ module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
   require('./routes/editor')(app);
+  require('./routes/pageList')(app);
 };

@@ -2,13 +2,14 @@
 
 const Service = require('egg').Service;
 
-class EditorService extends Service {
+class pageListService extends Service {
   async getInfo() {
-    return await this.ctx.model.Editor.find({});
+    return await this.ctx.model.PageList.find({});
   }
   addPage(req) {
     const ctx = this.ctx;
-    return ctx.model.Editor.create(req).then(res => {
+    console.log(req, '-=-=-=-=-=-=-=-----');
+    return ctx.model.PageList.create(req).then(res => {
       return { success: true, msg: res, code: 0 };
     }).catch(err => {
       return { success: false, err };
@@ -16,4 +17,4 @@ class EditorService extends Service {
   }
 }
 
-module.exports = EditorService;
+module.exports = pageListService;
