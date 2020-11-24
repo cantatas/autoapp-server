@@ -8,8 +8,15 @@ class pageListService extends Service {
   }
   addPage(req) {
     const ctx = this.ctx;
-    console.log(req, '-=-=-=-=-=-=-=-----');
     return ctx.model.PageList.create(req).then(res => {
+      return { success: true, msg: res, code: 0 };
+    }).catch(err => {
+      return { success: false, err };
+    });
+  }
+  deletePageById(req) {
+    const ctx = this.ctx;
+    return ctx.model.PageList.remove(req).then(res => {
       return { success: true, msg: res, code: 0 };
     }).catch(err => {
       return { success: false, err };

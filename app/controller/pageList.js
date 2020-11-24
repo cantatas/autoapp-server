@@ -15,6 +15,12 @@ class pageListController extends Controller {
     const result = await ctx.service.pageList.getInfo();
     ctx.body = result;
   }
+  async deletePageById() {
+    const ctx = this.ctx;
+    const req = ctx.request.body;
+    // 获取请求体的内容
+    ctx.body = await ctx.service.pageList.deletePageById(req);
+  }
 }
 
 module.exports = pageListController;
