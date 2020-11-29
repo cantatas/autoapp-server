@@ -3,7 +3,10 @@
 const Service = require('egg').Service;
 
 class pageListService extends Service {
-  async getInfo() {
+  async getInfoById(req) {
+    return await this.ctx.model.PageList.find(req);
+  }
+  async getPageList() {
     return await this.ctx.model.PageList.find({});
   }
   addPage(req) {

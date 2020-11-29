@@ -31,3 +31,8 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+
+### mongo server start
+```bash
+sudo mongod --dbpath data/db
+```

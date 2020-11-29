@@ -6,17 +6,20 @@ module.exports = app => {
 
   // 数据库表映射
   const EditorSchema = new Schema({
-    id: {
-      type: String,
-    },
-    name: {
-      type: String,
+    page_id: {
+      type: Schema.Types.ObjectId,
+      required: true,
     },
     formAttribute: {
       type: String,
+      required: true,
+    },
+    formType: {
+      type: Number,
     },
     createTime: {
       type: Date,
+
     },
     updateTime: {
       type: Date,

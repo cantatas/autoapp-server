@@ -6,6 +6,6 @@ const PATH = `${ROOT_PATH}editor/`;
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  app.router.post(`${PATH}addPage`, app.controller.editor.addPage);
-  app.router.get(`${PATH}getInfo`, app.controller.editor.getInfo);
+  app.router.post(`${PATH}addEditor`, app.controller.editor.addEditor);
+  app.router.get(`${PATH}getInfoById`, app.controller.editor.getInfoById);
 };

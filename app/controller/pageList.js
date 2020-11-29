@@ -10,9 +10,15 @@ class pageListController extends Controller {
     ctx.body = await ctx.service.pageList.addPage(req);
   }
 
-  async getInfo() {
+  async getInfoById() {
     const { ctx } = this;
-    const result = await ctx.service.pageList.getInfo();
+    const req = ctx.request.query;
+    const result = await ctx.service.pageList.getInfoById(req);
+    ctx.body = result;
+  }
+  async getPageList() {
+    const { ctx } = this;
+    const result = await ctx.service.pageList.getPageList();
     ctx.body = result;
   }
   async deletePageById() {

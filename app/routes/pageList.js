@@ -8,6 +8,7 @@ const PATH = `${ROOT_PATH}pageList/`;
  */
 module.exports = app => {
   app.router.post(`${PATH}addPage`, app.controller.pageList.addPage);
-  app.router.get(`${PATH}getInfo`, app.controller.pageList.getInfo);
+  app.router.get(`${PATH}getInfoById`, app.controller.pageList.getInfoById);
+  app.router.get(`${PATH}getPageList`, app.controller.pageList.getPageList);
   app.router.post(`${PATH}deletePageById`, app.controller.pageList.deletePageById);
 };
