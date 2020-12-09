@@ -3,8 +3,8 @@
 const Service = require('egg').Service;
 
 class EditorService extends Service {
-  async getInfoById() {
-    return await this.ctx.model.Editor.find({});
+  async getInfoById(req) {
+    return await this.ctx.model.Editor.find(req);
   }
   addEditor(req) {
     const ctx = this.ctx;

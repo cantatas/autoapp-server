@@ -11,11 +11,8 @@ module.exports = app => {
       required: true,
     },
     formAttribute: {
-      type: String,
+      type: Object,
       required: true,
-    },
-    formType: {
-      type: Number,
     },
     createTime: {
       type: Date,

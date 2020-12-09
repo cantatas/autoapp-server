@@ -11,7 +11,8 @@ class EditorController extends Controller {
 
   async getInfoById() {
     const { ctx } = this;
-    const result = await ctx.service.editor.getInfoById();
+    const req = ctx.request.query;
+    const result = await ctx.service.editor.getInfoById(req);
     ctx.body = result;
   }
 }
