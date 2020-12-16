@@ -8,6 +8,11 @@ class EditorController extends Controller {
     const req = ctx.request.body;
     ctx.body = await ctx.service.editor.addEditor(req);
   }
+  async updateEditor() {
+    const ctx = this.ctx;
+    const req = ctx.request.body;
+    ctx.body = await ctx.service.editor.updateEditor(req);
+  }
 
   async getInfoById() {
     const { ctx } = this;

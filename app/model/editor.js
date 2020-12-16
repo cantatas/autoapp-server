@@ -1,11 +1,15 @@
 'use strict';
 
 module.exports = app => {
-  const mongoose = app.mongoose; // 引入建立连接的mongoose
+  const mongoose = app.mongoose.set('debug', true); // 引入建立连接的mongoose
   const Schema = mongoose.Schema;
 
   // 数据库表映射
   const EditorSchema = new Schema({
+    _id: {
+      type: String,
+      required: true,
+    },
     page_id: {
       type: Schema.Types.ObjectId,
       required: true,
@@ -16,10 +20,11 @@ module.exports = app => {
     },
     createTime: {
       type: Date,
-
+      default: new Date().getTime(),
     },
     updateTime: {
       type: Date,
+      default: new Date().getTime(),
     },
     createBy: {
       type: String,
