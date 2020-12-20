@@ -6,10 +6,6 @@ module.exports = app => {
 
   // 数据库表映射
   const EditorSchema = new Schema({
-    _id: {
-      type: String,
-      required: true,
-    },
     page_id: {
       type: Schema.Types.ObjectId,
       required: true,
